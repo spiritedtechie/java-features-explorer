@@ -1,13 +1,13 @@
 package spiritedtechie;
 
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class Main {
+@SpringBootApplication
+class Main {
 
     public static void main(String args[]) {
-        var words = List.of("test", "test2", "test", "test3");
-
+        SpringApplication.run(Main.class, args);
         
     }
 
