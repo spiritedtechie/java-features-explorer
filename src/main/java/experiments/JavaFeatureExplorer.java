@@ -1,4 +1,4 @@
-package spiritedtechie.experiments;
+package experiments;
 
 import static java.lang.StringTemplate.STR;
 

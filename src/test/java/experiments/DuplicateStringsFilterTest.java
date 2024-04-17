@@ -1,4 +1,4 @@
-package spiritedtechie.experiments;
+package experiments;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 

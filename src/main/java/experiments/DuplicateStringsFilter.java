@@ -1,7 +1,8 @@
-package spiritedtechie.experiments;
+package experiments;
 
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-import java.util.*;
 
 public class DuplicateStringsFilter {
 
@@ -18,7 +19,7 @@ public class DuplicateStringsFilter {
     public List<String> deduplicate_2(List<List<String>> names) {
         return names.stream()
                 // .flatMap((var a) -> {
-                //     return a.stream();
+                // return a.stream();
                 // })
                 .flatMap(List::stream)
                 .distinct()
@@ -26,7 +27,7 @@ public class DuplicateStringsFilter {
     }
 
     public Map<String, Long> groupCount(List<List<String>> names) {
-         var collect = names.stream()
+        var collect = names.stream()
                 // .flatMap((var a) -> {
                 // return a.stream();
                 // })
