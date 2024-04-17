@@ -17,8 +17,8 @@ public class DuplicateStringsFilter {
 
     public List<String> deduplicate_2(List<List<String>> names) {
         return names.stream()
-                // .flatMap((List<String> a) -> {
-                // return a.stream();
+                // .flatMap((var a) -> {
+                //     return a.stream();
                 // })
                 .flatMap(List::stream)
                 .distinct()
@@ -27,7 +27,7 @@ public class DuplicateStringsFilter {
 
     public Map<String, Long> groupCount(List<List<String>> names) {
          var collect = names.stream()
-                // .flatMap((List<String> a) -> {
+                // .flatMap((var a) -> {
                 // return a.stream();
                 // })
                 .flatMap(List::stream)

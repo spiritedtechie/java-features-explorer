@@ -47,7 +47,13 @@ public class JavaFeatureExplorer {
         return customerRecord;
     }
 
-    public void betterSwitch(Object o) {
+    public void instanceOfPatternMatching(Object r) {
+        if (r instanceof CustomerRecord(var name, var address)) {
+            System.out.printf("Matched Customer record for: %s!%n", name);
+        }
+    }
+
+    public void switchPatternMatching(Object o) {
         String message = switch (o) {
             case CustomerRecord r when r.name().contains("50 Cent") -> {
                 yield "special customer: " + r;
@@ -83,11 +89,12 @@ public class JavaFeatureExplorer {
 
         var record = explorer.record();
 
-        explorer.betterSwitch(record);
-        explorer.betterSwitch(new CustomerRecord("50 Cent", "LA"));
-        explorer.betterSwitch("Hello");
-        explorer.betterSwitch("H");
-        explorer.betterSwitch(1);
+        explorer.instanceOfPatternMatching(record);
+        explorer.switchPatternMatching(record);
+        explorer.switchPatternMatching(new CustomerRecord("50 Cent", "LA"));
+        explorer.switchPatternMatching("Hello");
+        explorer.switchPatternMatching("H");
+        explorer.switchPatternMatching(1);
 
         explorer.enumSwitch(CustomerType.COMMERCIAL);
 
@@ -96,6 +103,9 @@ public class JavaFeatureExplorer {
         } catch (Exception e) {
             System.out.println(e);
         }
+
+        Runnable runnable = () -> System.out.println("Hello world!");
+        runnable.run();
     }
 
 }
