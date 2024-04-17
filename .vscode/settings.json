@@ -2,11 +2,9 @@
     "java.configuration.updateBuildConfiguration": "disabled",
     "java.compile.nullAnalysis.mode": "automatic",
     "java.configuration.runtimes": [
-      
         {
           "name": "JavaSE-22",
           "path": "/Users/vijay/.sdkman/candidates/java/22-oracle",
-          "default": true
         },
       ],
 }

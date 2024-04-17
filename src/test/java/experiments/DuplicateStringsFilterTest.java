@@ -32,13 +32,22 @@ public class DuplicateStringsFilterTest {
     }
 
     @Test
-    public void testGroupCount() {
+    public void testWordCount() {
 
         List<List<String>> names = List.of(List.of("bob", "john"), List.of("bob", "fred", "fred"), List.of("george"));
 
-        Map<String, Long> result = filter.groupCount(names);
+        Map<String, Long> result = filter.wordCount(names);
 
         Map<String, Long> expected = Map.of("bob", 2L, "john", 1L, "fred", 2L, "george", 1L);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void testWordCountManual() {
+        Map<String, Integer> result = filter.wordCountManual("bob john bob fred fred george");
+
+        Map<String, Integer> expected = Map.of("bob", 2, "john", 1, "fred", 2, "george", 1);
 
         assertEquals(expected, result);
     }
