@@ -7,17 +7,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Customer {
+public class Customer extends Person {
     private @Id @GeneratedValue Long id;
     private String firstName;
     private String lastName;
 
     public Customer(String firstName, String lastName) {
+        super();
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
     public Customer() {
+        super();
     }
 
     public void setId(Long id) {
