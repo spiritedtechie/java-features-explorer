@@ -2,7 +2,6 @@ package spiritedtechie.experiments;
 
 import java.util.stream.Collectors;
 import java.util.*;
-import java.util.stream.*;
 
 public class DuplicateStringsFilter {
 
@@ -27,7 +26,7 @@ public class DuplicateStringsFilter {
     }
 
     public Map<String, Long> groupCount(List<List<String>> names) {
-         Map<String, Long> collect = names.stream()
+         var collect = names.stream()
                 // .flatMap((List<String> a) -> {
                 // return a.stream();
                 // })

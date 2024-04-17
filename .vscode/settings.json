@@ -6,6 +6,7 @@
         {
           "name": "JavaSE-22",
           "path": "/Users/vijay/.sdkman/candidates/java/22-oracle",
+          "default": true
         },
-      ]
+      ],
 }
