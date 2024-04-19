@@ -44,10 +44,11 @@ public class DuplicateStringsFilterTest {
     }
 
     @Test
-    public void testWordCountManual() {
-        Map<String, Integer> result = filter.wordCountManual("bob john bob fred fred george");
+    public void testWordCountManualReturningString() {
 
-        Map<String, Integer> expected = Map.of("bob", 2, "john", 1, "fred", 2, "george", 1);
+        String result = filter.wordCountManual("bob john bob fred fred george");
+
+        String expected = "bob->2 fred->2 george->1 john->1";
 
         assertEquals(expected, result);
     }
