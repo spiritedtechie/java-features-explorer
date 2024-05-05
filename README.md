@@ -1,4 +1,4 @@
-# java-refresher-2024
+# java-features-explorer
 
 A simple scratchpad project to explore Java language features for older and more recent Java releases.
 
